@@ -17,7 +17,7 @@
         <tr>
             <td>高频</td>
             <td>介绍</td>
-            <td><a href="file://localhost/d:/Work/INTERNSHIP/研报/高频/海通证券_听海外高频交易专家讲解美国的高频交易.pdf">海通证券_听海外高频交易专家讲解美国的高频交易.pdf</a> </td>
+            <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/高频/海通证券_听海外高频交易专家讲解美国的高频交易.pdf">海通证券_听海外高频交易专家讲解美国的高频交易.pdf</a> </td>
             <td>
             <ol>
                 <li>介绍flash crash“闪崩”，由于交易者（包括做市商）不愿承接大卖单，委买数量急剧下降，流动性枯竭，导致市场快速下跌<br/></li>
@@ -31,7 +31,7 @@
         <tr>
             <td>高频</td>
             <td>介绍</td>
-            <td><a href="file://localhost/d:/Work/INTERNSHIP/研报/高频/平安证券_策略专题报告_从海外经验看中国高频交易的发展.pdf">平安证券_策略专题报告：从海外经验看中国高频交易的发展.pdf</a></td>
+            <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/高频/平安证券_策略专题报告_从海外经验看中国高频交易的发展.pdf">平安证券_策略专题报告：从海外经验看中国高频交易的发展.pdf</a></td>
             <td>
             <ol>
             <li>介绍了美国高频、中国高频发展</li>
@@ -51,7 +51,7 @@
         <tr>
             <td>高频</td>
             <td>因子-spread tick / spread date / BuyRate</td>
-            <td><a href="file://localhost/d:/Work/INTERNSHIP/研报/高频/2019-09-05_天风证券_市场微观结构探析系列之二：订单簿上的alpha.pdf">2019-09-05_天风证券_市场微观结构探析系列之二：订单簿上的alpha</a></td>
+            <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/高频/订单簿lob/2019-09-05_天风证券_市场微观结构探析系列之二：订单簿上的alpha.pdf">2019-09-05_天风证券_市场微观结构探析系列之二：订单簿上的alpha</a></td>
             <td>
                 通过高频spread tick因子计算spread date/month，有显著盈利能力。且和BuyRate负相关性
             </td>
@@ -61,12 +61,11 @@
 </table>
 
 
-
 <!--
         <tr>
             <td></td>
             <td></td>
-            <td><a href="file://localhost/d:/Work/INTERNSHIP/研报/"></a></td>
+            <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/高频/订单簿lob/"></a></td>
             <td>
                 <ul>
                     <li></li>

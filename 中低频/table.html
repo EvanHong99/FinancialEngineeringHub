@@ -1,0 +1,118 @@
+<table>
+    <thead>
+    <tr>
+        <th>领域</th>
+        <th>主题</th>
+        <th>link</th>
+        <th>主要内容</th>
+        <th>星级</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>中频</td>
+        <td>日内收益分布</td>
+        <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/中频/sources/【华泰期货股指期货专题】量价特征1——日内收益分布.pdf">【华泰期货股指期货专题】量价特征1——日内收益分布.pdf</a></td>
+        <td>
+            文章采用将<strong>“股指期货”</strong>日内划分为5min，然后对这五分钟涨跌幅进行统计。
+            <ul>
+                <li>开盘5min收益累计净值稳定增长</li>
+                <li>14:40~14:45收益累计净值稳定下降</li>
+            </ul>
+            股指期货价格变动可以分为两个部分：标的指数变动以及期指基差变动，因此需要对其更仔细的研究。</br>
+            指数：
+            <ul>
+                <li>14：55~15：00指数持续性上行，而14：40~14：45以及09：30~09：45指数持续性下行。 </li>
+            </ul>
+            策略
+            09：30~09：35，隔夜的对冲头寸平仓，基差大幅上行，尽管指数下跌，但仍带动股指
+            期货大幅上行；
+            13：00~13：05，对冲头寸开始建仓，指数无较大变化，因此股指期货小幅下跌；
+            14：40~14：45，基差无较大变化，指数小幅下行，因此股指期货继续小幅下跌；
+            14：55~15：00，对冲头寸继续建仓，基差小幅下行，而指数小幅上行，两者相互抵消
+            导致股指期货走平。
+
+            <strong>亮点
+                <ul>
+                    <li>根据不同时段指数现货和股指期货及其基差的特征，构建增强策略（即在不同时段进行相应专家系统给出的操作）</li>
+                    <li>明确不同操作对整体净值带来的收益大小</li>
+                </ul>
+            </strong>
+
+        </td>
+        <td>4</td>
+    </tr>     
+    
+    <tr>
+        <td>中频</td>
+        <td>日内收益分布、日内动量</td>
+        <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/中频/sources/">【深度报告——金融工程】股指期货日内价格规律及收益增强策略构建</a></td>
+        <td>
+            <ul>
+                <li>基差与合约间的期限价差往往有着相同趋势</li>
+                <li>探究了不同的期限交易规律（隔夜，日内，开盘半小时，尾盘半小时，下午开盘半小时），股票指数的隔夜收益显著为负，日内收益、开盘收益和尾盘收益均显著为正，跨期反套组合（空当月多当季）也有明显的日内收益</li>
+                <li>日内动量与隔夜反转：大量文献指出，大部分主流市场存在较为明显的<strong>日内动量效应</strong>，尾盘交易者会因为信息滞后从而加强动量。</li>
+                <li>文章对日内动量可预测性进行了探究</li>
+            </ul>
+
+            疑问：
+            <ul>
+                <li>
+当市场波动较低，做多波动率的期权策略将产生正 ggamma 敞口，此时的 delta 对冲是高抛低吸的模式，此时市场的反转效应会增加；反之市场波动较高时，做空波动率的期权策略将产生负gamma 敞口，此时的 delta对冲是追涨杀跌的模式，此时市场的动量效应将被加强。
+                </li>
+            </ul>
+        </td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>中频</td>
+        <td></td>
+        <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/中频/sources/"></a></td>
+        <td>
+            文章研究了股指现货和期货不同时间段的交易特征，并观察了基差的日内模式。<br>
+            (1) 开盘-前收对应指数的开盘跳空收益，该收益在 2015 年以来持续为负，表明中证 500 指数开盘 多数为低开或者小幅高开，因此跳空风险较大;
+            (2) 开盘初 5 分钟(9:30-9:35)的收益多数为正，在 2019 年以前较为稳定，但 2019 年及以后稳 定性下滑，这与前文提到的开盘成交拥挤度上升相对应，早盘 5 分钟的收益有一定的衰减;
+            (3) 收盘前 5 分钟(11:25-11:30 和 14:55-15:00)的收益长期为正且极为稳定，表明收盘前交 易情绪一般偏多;
+            (4) 14:40-14:45 时段的累计收益稳定向下，且该时段成交量较大，表明投资者的集中抛售一般 发生在此时。
+        </td>
+        <td></td>
+    </tr>
+        <tr>
+        <td>中频</td>
+        <td>日内动量</td>
+        <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/中频/sources/Hedging demand and market intraday momentum.pdf">Hedging demand and market intraday momentum.pdf</a></td>
+        <td>
+            作者认为日内动量主要是由以下原因产生的
+            <ul>
+                <li>做市商对冲需求：大部分市场参与者是现货多头，为了防范下跌风险，以及更高的获利，他们会short call long put。而作为对手方的做市商则可能会持有相反头寸(long call short put)。当long的gamma>short的gamma，会有正的net gamma。<br>
+                if option market makers are net long gamma (which happens, for example, with net short put and long call positions and markets drifting up), they will have to trade against the market. As such, they could off-
+set the effects of information and rebalancing trades, po-
+tentially resulting in no market intraday momentum or
+even intraday reversals. Hence, if hedging demand is a key
+driver of market intraday momentum, the market intraday
+momentum could be virtually absent in periods that op-
+tion market makers are not net short gamma, but stronger
+the more gamma they short.
+                    也就是说，long net gamma会使得市场平稳、反转，而short net gamma则会动量。<font color="red">这是因为如果是long gamma，那么市场上涨，delta会变大，需要卖现货、期货去平掉delta，因此市场又会下跌；而当short gamma，市场上涨delta变小，此时需要买现货期货来平掉负的delta，从而造成动量</font>
+                </li>
+                <li>更重要的是，我们发现了一种推动市场盘中动能的新型经济力量：市场参与者的对冲需求来自空头伽马敞口。我们的测试将市场盘中动量的横截面和时间序列变化与这种对冲需求联系起来。我们的证据表明，投资组合保险公司、期权做市商和杠杆ETF等投资者群体的集中交易可能会产生重大的非基本面价格影响，放大价格变化并影响他们交易前后的市场动态。矛盾的是，这些动态甚至可能导致杠杆（包括空头）ETF跑输其标的指数，因为它们交易的对冲影响往往会恢复。同时，市场动态在日内具有很强的可预测性，因此，积极主动的投资者可以从中受益，例如，通过机会性地提供流动性来预期对冲流量或计划交易的明智时机。</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<!--
+    <tr>
+        <td>中频</td>
+        <td></td>
+        <td><a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/中频/sources/"></a></td>
+        <td>
+            <ul>
+                <li></li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>    
+    <strong>.</strong>
+-->

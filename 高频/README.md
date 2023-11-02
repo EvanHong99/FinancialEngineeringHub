@@ -18,7 +18,7 @@
         <td>高频</td>
         <td>介绍</td>
         <td>
-            <a href="https://github.com/EvanHong99/FinancialEngineeringHub/blob/master/高频/海通证券_听海外高频交易专家讲解美国的高频交易.pdf">海通证券_听海外高频交易专家讲解美国的高频交易.pdf</a>
+            <a href="./海通证券_听海外高频交易专家讲解美国的高频交易.pdf">海通证券_听海外高频交易专家讲解美国的高频交易.pdf</a>
         </td>
         <td>
             <ul>

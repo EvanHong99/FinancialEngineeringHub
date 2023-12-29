@@ -14,7 +14,7 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./波动率拟合/Deep Smoothing of the Implied Volatility Surface.pdf">Deep Smoothing of the Implied Volatility Surface.pdf</a></td>
+        <td><a href="./隐波拟合/Deep Smoothing of the Implied Volatility Surface.pdf">Deep Smoothing of the Implied Volatility Surface.pdf</a></td>
         <td>
             核心思想：用神经网络输出修正系数，与Prior模型的输出相乘从而实现在符合基本规律的情况下对结果进行优化。类似于resnet。
            <ul>
@@ -31,8 +31,16 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./波动率拟合/A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf">A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf</a></td>
+        <td><a href="./隐波拟合/A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf">A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf</a></td>
         <td>
+            文献综述：
+            <ul>
+                <li>主流的方法有三类：Parametric models、splines、Machine learning models</li>
+                <li>pca：PCA
+ analysis, already explain most of the variations in their data;
+ these eigenmodes are associated with the level, skewness, and
+ convexity of the IVS</li>
+            </ul>
             <ul>
                 <li>- **文档主题**：本文研究了如何用无套利的方式预测和模拟隐含波动率曲面（IVS），并提出了一个两步框架。</li>
                 <li>- **文档方法**：第一步，选择特征向量来表示IVS，并用长短期记忆模型（LSTM）来预测它们。第二步，用一个深度神经网络（DNN）模型，结合静态无套利约束，从预测的特征向量构造整个IVS。</li>
@@ -44,7 +52,7 @@
                 <li>- **特征提取**：文档详细讨论了三种特征提取方法的细节，并对每种方法的性能进行了比较。 特征提取部分的基础数据、特征提取方法以及最终的性能如下：
                     <ul>
                         - 基础数据：本文使用了从2009年1月1日到2020年12月31日的S&P500指数期权的隐含波动率曲面（IVS）数据，每天有374个不同的（δ, τ）对，其中δ是Black-Scholes delta，τ是剩余到期时间。由于本文将IVS视为m和τ的函数，其中m是对数正向货币性，因此需要将δ转换为m。最终，每天有一个154维的隐含波动率向量¯ t作为输入数据。
-                - 特征提取方法：本文考虑了三种方法来从隐含波动率数据中提取特征，分别是：
+                        - 特征提取方法：本文考虑了三种方法来从隐含波动率数据中提取特征，分别是：
                     - **采样法（SAM）**：直接使用¯ t作为IVS的特征向量，不进行降维。这种方法的优点是能够更好地近似曲面，缺点是预测高维特征向量可能更困难。
                     - **主成分分析（PCA）**：参考Cont and Da Fonseca (2002)的方法，对¯ t的对数变化进行表面PCA，得到一组特征向量Zt，其维度为K，通常K远小于154。这种方法的优点是能够用少量的特征向量捕捉曲面的主要变化，缺点是基于线性组合的特征向量可能不够准确。
                     - **变分自编码器（VAE）**：参考Kingma and Welling (2013)的方法，使用一个编码器神经网络从¯ t中提取出一组潜在因子Zt，其维度为d，通常d远小于154。然后，使用一个解码器神经网络从Zt重构¯ t。这种方法的优点是能够提供一个灵活的非线性因子表示，缺点是需要训练两个神经网络。
@@ -58,6 +66,80 @@
         </td>
         <td></td>
     </tr>
+        <tr>
+        <td>历史波动率</td>
+        <td>calendar_effect</td>
+        <td><a href="./历史波动率/holiday_or_calendar_effect/The High Holidays- Psychological mechanisms of honesty in real-life financial decisions.pdf">The High Holidays: Psychological mechanisms of honesty in real-life financial decisions</a></td>
+        <td>
+            <ul>
+                <li>- **文档主题**：本文探讨了宗教、心理和金融市场之间的相互作用，特别是在犹太教的高节期间，人们对诚实的关注如何影响他们的投资决策。</li>
+                <li>- **文档方法**：本文使用了不同的数据和模型，包括 VIX 和 VXO 作为隐含波动率的指标，以及实际波动率的估计。本文还考虑了季节性、其他金融因素和谷歌搜索量指数等变量的影响。</li>
+                <li>- **文档结果**：本文发现， <strong>在高节期间，市场回报率异常低，隐含波动率和实际波动率异常高，而且隐含波动率超过了未来波动率的预期。</strong> 本文解释这些现象是由于高节期间人们对诚实的关注增强了他们的焦虑和自我反省，从而影响了他们的交易行为。</li>
+                <li>- **文档贡献**：本文填补了实证研究中的一个空白，即使用真实的金融数据来检验诚实机制对投资者行为的影响。本文也提出了一个简单的交易策略，利用高节期间的波动率异常来获取超额收益。本文的发现对理解市场情绪、投资者心理和宗教信仰的作用有重要的启示。</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+        <tr>
+        <td>历史波动率</td>
+        <td>calendar_effect</td>
+        <td><a href="./历史波动率/holiday_or_calendar_effect/Calendar Effect in The Chinese Securities Market.pdf">Calendar Effect in The Chinese Securities Market.pdf</a></td>
+        <td>
+            <ul>
+                <li>- **周日历效应**：中国期货市场、航运金融衍生品市场和上海黄金期货市场都存在周日历效应，即不同交易日的收益率和波动率有显著差异。其中，周一和周五的收益率和波动率较高，周二和周四的收益率较低，周三的波动率较大。</li>
+                <li>- **信息传播影响**：周日历效应的存在与信息传播有关，例如国际期货市场的周五效应对中国期货市场的周一效应的影响，以及政府政策或上市公司公告对股指期货市场的影响。</li>
+                <li>- **投资者行为影响**：周日历效应的存在也与投资者行为有关，例如投资者的风险厌恶策略、羊群效应、前景理论等，导致投资者在特定日期买卖金融衍生品，从而影响价格变动。</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+        <tr>
+        <td>隐波</td>
+        <td>拟合</td>
+        <td><a href="./VRP volatility risk premium/Implied volatility information of Chinese SSE 50 ETF options.pdf">Implied volatility information of Chinese SSE 50 ETF options.pdf</a></td>
+        <td>
+            VRPt = RVt − IVt
+            <ul>
+                <li>金融市场对未来波动率的预期高于实物波动率。The statistical results show that the means of volatility risk premiums of call options and put options are all negative according to moneyness and time to maturity, indicating that China's financial marketexpectation of future volatility is always higher than the physical volatility. China's GDP has been rising at high rate every year, and the financial market has shown an overall upward trend and occasional sharp corrections, which have led to the phenomenon of large fluctuations in China's financial market. Therefore, China's financial market has a high expectation for future volatility, which tends to exceed the physical volatility of the current financial market.</li>
+                <li>We divided the options sample into call options and put options. The regression coefficients of call and put options are both significantly positive, indicating that the volatility risk premium positively affects the realized volatility of the underlying security. Economic uncertainty in markets increases when volatility risk premiums is higher. Investors will panic in the face of possible extreme risk of loss, which in turn will increase trading volume and ultimately increase the volatility of the underlying securities.
+                    我们将期权样本分为看涨期权和看跌期权。看涨期权和看跌期权的回归系数均显著为正，表明波动率风险溢价对标的证券的已实现波动率有正向影响。当波动性风险溢价较高时，市场的经济不确定性就会增加。面对可能出现的极端损失风险，投资者会感到恐慌，这反过来又会增加交易量，最终增加相关证券的波动性。</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>隐波</td>
+        <td>拟合</td>
+        <td><a href="./VRP volatility risk premium/Dynamic estimation of volatility risk premia and investor risk aversion from option-implied and realized volatilities.pdf">Dynamic estimation of volatility risk premia and investor risk aversion from option-implied and realized volatilities.pdf</a></td>
+        <td>
+            <ul>
+                <li>提出了一种Model-free implied volatility计算方式</li>
+                <li>给出了如何计算rv的公式</li>
+                <li>如何计算iv</li>
+                <li>如何评价波动率</li>
+                <li>This paper develops a simple consistent approach for estimating
+the volatility risk premium. The approach exploits the linkage
+between the objective and risk-neutral expectations of the
+integrated volatility. The estimation is facilitated by the use of
+newly available model-free realized volatilities based on highfrequency intraday data along with model-free option-implied
+volatilities.</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>隐波</td>
+        <td>拟合</td>
+        <td><a href="./VRP volatility risk premium/Implied volatility information of Chinese SSE 50 ETF options.pdf">Implied volatility information of Chinese SSE 50 ETF options</a></td>
+        <td>
+            <ul>
+                <li>提出了一种Model-free implied volatility计算方式</li>
+                <li>给出了如何计算VRP的公式: 1. stochastic volatility model 反推  (Bakshi, 2003; Duan & Yeh, 2010; Neumann, Prokopczuk, &
+                    Simen, 2016; Bardgett, Gourier, & Leippold, 2019) 2. 通过variance swap来计算 ( Carr and Wu (2009))： <math>EtQ(RVt) = SWt = Et P(mtRVt) = Et P(RVt) + COVt P(mt, RVt)</math></li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
     </tbody>
 </table>
 </html>
@@ -65,7 +147,7 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./波动率拟合/"></a></td>
+        <td><a href="./历史波动率/"></a></td>
         <td>
             <ul>
                 <li></li>

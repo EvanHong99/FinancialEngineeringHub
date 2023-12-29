@@ -14,7 +14,7 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./波动率拟合/Deep Smoothing of the Implied Volatility Surface.pdf">Deep Smoothing of the Implied Volatility Surface.pdf</a></td>
+        <td><a href="./隐波拟合/Deep Smoothing of the Implied Volatility Surface.pdf">Deep Smoothing of the Implied Volatility Surface.pdf</a></td>
         <td>
             核心思想：用神经网络输出修正系数，与Prior模型的输出相乘从而实现在符合基本规律的情况下对结果进行优化。类似于resnet。
            <ul>
@@ -31,7 +31,7 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./波动率拟合/A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf">A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf</a></td>
+        <td><a href="./隐波拟合/A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf">A two-step framework for arbitrage-free prediction of the implied volatility surface.pdf</a></td>
         <td>
             文献综述：
             <ul>
@@ -67,8 +67,8 @@
         <td></td>
     </tr>
         <tr>
-        <td>隐波</td>
-        <td>拟合</td>
+        <td>历史波动率</td>
+        <td>calendar_effect</td>
         <td><a href="./历史波动率/holiday_or_calendar_effect/The High Holidays- Psychological mechanisms of honesty in real-life financial decisions.pdf">The High Holidays: Psychological mechanisms of honesty in real-life financial decisions</a></td>
         <td>
             <ul>
@@ -81,9 +81,22 @@
         <td></td>
     </tr>
         <tr>
+        <td>历史波动率</td>
+        <td>calendar_effect</td>
+        <td><a href="./历史波动率/holiday_or_calendar_effect/Calendar Effect in The Chinese Securities Market.pdf">Calendar Effect in The Chinese Securities Market.pdf</a></td>
+        <td>
+            <ul>
+                <li>- **周日历效应**：中国期货市场、航运金融衍生品市场和上海黄金期货市场都存在周日历效应，即不同交易日的收益率和波动率有显著差异。其中，周一和周五的收益率和波动率较高，周二和周四的收益率较低，周三的波动率较大。</li>
+                <li>- **信息传播影响**：周日历效应的存在与信息传播有关，例如国际期货市场的周五效应对中国期货市场的周一效应的影响，以及政府政策或上市公司公告对股指期货市场的影响。</li>
+                <li>- **投资者行为影响**：周日历效应的存在也与投资者行为有关，例如投资者的风险厌恶策略、羊群效应、前景理论等，导致投资者在特定日期买卖金融衍生品，从而影响价格变动。</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+        <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./历史波动率/Implied volatility information of Chinese SSE 50 ETF options.pdf">Implied volatility information of Chinese SSE 50 ETF options.pdf</a></td>
+        <td><a href="./VRP volatility risk premium/Implied volatility information of Chinese SSE 50 ETF options.pdf">Implied volatility information of Chinese SSE 50 ETF options.pdf</a></td>
         <td>
             VRPt = RVt − IVt
             <ul>
@@ -97,12 +110,14 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./历史波动率/holiday_or_calendar_effect/Calendar Effect in The Chinese Securities Market.pdf">Calendar Effect in The Chinese Securities Market.pdf</a></td>
+        <td><a href="./VRP volatility risk premium/Dynamic estimation of volatility risk premia and investor risk aversion from option-implied and realized volatilities.pdf">Dynamic estimation of volatility risk premia and investor risk aversion from option-implied and realized volatilities.pdf</a></td>
         <td>
             <ul>
-                <li>- **周日历效应**：中国期货市场、航运金融衍生品市场和上海黄金期货市场都存在周日历效应，即不同交易日的收益率和波动率有显著差异。其中，周一和周五的收益率和波动率较高，周二和周四的收益率较低，周三的波动率较大。</li>
-                <li>- **信息传播影响**：周日历效应的存在与信息传播有关，例如国际期货市场的周五效应对中国期货市场的周一效应的影响，以及政府政策或上市公司公告对股指期货市场的影响。</li>
-                <li>- **投资者行为影响**：周日历效应的存在也与投资者行为有关，例如投资者的风险厌恶策略、羊群效应、前景理论等，导致投资者在特定日期买卖金融衍生品，从而影响价格变动。</li>
+                <li>提出了一种Model-free implied volatility计算方式</li>
+                <li>给出了如何计算rv的公式</li>
+                <li>如何计算iv</li>
+                <li>如何评价波动率</li>
+                <li>This paper develops a simple consistent approach for estimating the volatility risk premium. The approach exploits the linkage between the objective and risk-neutral expectations of the integrated volatility. The estimation is facilitated by the use of newly available model-free realized volatilities based on highfrequency intraday data along with model-free option-implied volatilities.</li>
             </ul>
         </td>
         <td></td>
@@ -110,11 +125,17 @@
     <tr>
         <td>隐波</td>
         <td>拟合</td>
-        <td><a href="./历史波动率/holiday_or_calendar_effect/Seasonal patterns and calendar anomalies in the commodity market for natural resources.pdf">Seasonal patterns and calendar anomalies in the commodity market for natural resources.pdf</a></td>
+        <td><a href="./VRP volatility risk premium/Implied volatility information of Chinese SSE 50 ETF options.pdf">Implied volatility information of Chinese SSE 50 ETF options</a></td>
         <td>
-            主要查看了国际期货市场受节日的影响，并不是中国市场
+            This paper uses the realized volatility of the underlying securities as an explanatory variable. To explore whether the volatility risk
+premium affects the underlying market volatility,
             <ul>
-                <li></li>
+                <li>提出了一种Model-free implied volatility计算方式</li>
+                <li>给出了如何计算VRP的公式: 1. stochastic volatility model 反推  (Bakshi, 2003; Duan & Yeh, 2010; Neumann, Prokopczuk, &
+                    Simen, 2016; Bardgett, Gourier, & Leippold, 2019) 2. 通过variance swap来计算 ( Carr and Wu (2009))： <math>EtQ(RVt) = SWt = Et P(mtRVt) = Et P(RVt) + COVt P(mt, RVt)</math></li>
+                <li>Statistics of volatility risk premium of SSE 50 ETF options.</li>
+                <li>volatility of realized volatility：This paper uses the 1-min close price of the SSE 50 ETF to calculate the 5-min realized volatility, through a sliding window of length
+ 15 according to Equation。both implied volatility and realized volatility increase when volatility of volatility is high.</li>
             </ul>
         </td>
         <td></td>
